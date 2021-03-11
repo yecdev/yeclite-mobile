@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 jni = { version = "0.10.2", default-features = false }
-zecwalletlitelib = { git="https://github.com/adityapk00/zecwallet-light-cli", default-features=false, rev="f051f4a996ea2899079ac23e4a716dc5c5cb6156" }
+zecwalletlitelib = { git="https://github.com/yecdev/yecshell", default-features=false, rev="82de90b24be9b2f43642ea301b18441634439bb5" }
 #zecwalletlitelib = { path = "../../../zecwallet-light-cli/lib", default-features=false }
 lazy_static = "1.4.0"
 android_logger = "0.8.6"

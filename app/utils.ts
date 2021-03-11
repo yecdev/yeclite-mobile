@@ -12,7 +12,7 @@ export default class Utils {
     if (!addr) {
       return false;
     }
-    return new RegExp('^z[a-z0-9]{77}$').test(addr) || new RegExp('^ztestsapling[a-z0-9]{76}$').test(addr);
+    return new RegExp('^y[a-z0-9]{77}$').test(addr) || new RegExp('^ytestsapling[a-z0-9]{76}$').test(addr);
   }
 
   static isSprout(addr: string): boolean {

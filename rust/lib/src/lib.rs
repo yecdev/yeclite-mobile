@@ -16,7 +16,7 @@ lazy_static! {
 }
 pub fn init_new(server_uri: String, sapling_output_b64: String, sapling_spend_b64: String) -> String {
     let server = LightClientConfig::get_server_or_default(Some(server_uri));
-    let (config, latest_block_height) = match LightClientConfig::create(server) {
+    let (config, latest_block_height) = match LightClientConfig::create(server, None, None, None, None) {
         Ok((c, h)) => (c, h),
         Err(e) => {
             return format!("Error: {}", e);
@@ -49,7 +49,7 @@ pub fn init_new(server_uri: String, sapling_output_b64: String, sapling_spend_b6
 
 pub fn init_from_seed(server_uri: String, seed: String, birthday: u64, sapling_output_b64: String, sapling_spend_b64: String) -> String {
     let server = LightClientConfig::get_server_or_default(Some(server_uri));
-    let (config, _latest_block_height) = match LightClientConfig::create(server) {
+    let (config, _latest_block_height) = match LightClientConfig::create(server, None, None, None, None) {
         Ok((c, h)) => (c, h),
         Err(e) => {
             return format!("Error: {}", e);
@@ -82,7 +82,7 @@ pub fn init_from_seed(server_uri: String, seed: String, birthday: u64, sapling_o
 
 pub fn init_from_b64(server_uri: String, base64_data: String, sapling_output_b64: String, sapling_spend_b64: String) -> String {
     let server = LightClientConfig::get_server_or_default(Some(server_uri));
-    let (config, _latest_block_height) = match LightClientConfig::create(server) {
+    let (config, _latest_block_height) = match LightClientConfig::create(server, None, None, None, None) {
         Ok((c, h)) => (c, h),
         Err(e) => {
             return format!("Error: {}", e);

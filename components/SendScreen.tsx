@@ -495,7 +495,7 @@ const SendScreen: React.FunctionComponent<SendScreenProps> = ({
                   borderBottomWidth: 2,
                 }}>
                 <RegTextInput
-                  placeholder="z-address or t-address"
+                  placeholder="y-address or s-address"
                   placeholderTextColor="#777777"
                   style={{flexGrow: 1, maxWidth: '90%'}}
                   value={ta.to}
@@ -511,7 +511,7 @@ const SendScreen: React.FunctionComponent<SendScreenProps> = ({
               </View>
 
               <View style={{marginTop: 30, display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <FadeText>Amount (ZEC)</FadeText>
+                <FadeText>Amount (YEC)</FadeText>
                 {amountValidationState[i] === 1 && (
                   <UsdAmount price={zecPrice} amtZec={Utils.parseLocaleFloat(ta.amount)} />
                 )}

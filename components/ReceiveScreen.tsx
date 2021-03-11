@@ -68,8 +68,8 @@ type ReceiveScreenProps = {
 const ReceiveScreen: React.FunctionComponent<ReceiveScreenProps> = ({addresses, toggleMenuDrawer}) => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    {key: 'zaddr', title: 'Z Address'},
-    {key: 'taddr', title: 'T Address'},
+    {key: 'zaddr', title: 'Y Address'},
+    {key: 'taddr', title: 'S Address'},
   ]);
   const {colors} = useTheme();
 
